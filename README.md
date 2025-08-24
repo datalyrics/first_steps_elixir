@@ -10,7 +10,7 @@ by adding `cards` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:cards, "~> 0.1.0"}
+    {:cards, "~> 0.2.0"}
   ]
 end
 ```
