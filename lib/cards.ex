@@ -5,7 +5,7 @@ defmodule Cards do
     suits  = ["Hearts", "Diamonds", "Clubs", "Spades"]
 
     for suit <- suits, value <- values do
-      "#{value} of #{suit}" 
+      "#{value} of #{suit}"
     end
   end
 
@@ -29,12 +29,9 @@ defmodule Cards do
 
   def load(filename) do
     case File.read(filename) do
-      {:ok, binary} ->
-        :erlang.binary_to_term(binary)
-      {:error, _reason} ->
-        "File not found"
+      {:ok, binary}    -> :erlang.binary_to_term(binary)
+      {:error, reason} -> "File not found error: #{reason}"
     end
   end
-
 
 end
