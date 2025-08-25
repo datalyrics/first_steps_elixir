@@ -6,14 +6,14 @@ atom    :name
 tuple   {}
 map     %{key: value}   
     usage: 
-    iex> xy = %{a: "b"}
-    iex> xy.a
-    "b"
+        iex> xy = %{a: "b"}
+        iex> xy.a
+        "b"
 
     matching:
-    iex> %{a: myvar} = xy
-    iex> myvar
-    "b"
+        iex> %{a: myvar} = xy
+        iex> myvar
+        "b"
 
     update:
         a)
@@ -23,7 +23,16 @@ map     %{key: value}
         iex> xy = %{ xy | a: "c" }
 
 keyword list
-
+    [ key: value ]
+    usage:
+        iex> kw = [a: "b"]
+        iex> kw[:a]
+        "b"
+    
+    matching:
+        iex> [a: myvar] = kw
+        iex> myvar
+        "b"
 
 
 
